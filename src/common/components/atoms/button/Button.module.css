@@ -1,0 +1,13 @@
+.basicButton {
+  width: var(--button-width-md);
+  height: var(--button-height-md);
+  color: var(--font-color-theme);
+  background-color: var(--color-orange-4);
+  font-size: var(--font-size-base);
+  align-items: center;
+  justify-content: center;
+}
+
+.roundButton {
+  border-radius: calc(10rem / 16);
+}

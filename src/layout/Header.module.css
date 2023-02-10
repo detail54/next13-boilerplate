@@ -1,0 +1,6 @@
+.header {
+  width: 100vw;
+  flex-direction: row;
+  background-color: var(--color-black-1);
+  color: var(--font-color-white);
+}

@@ -1,0 +1,9 @@
+@import '/src/common/styles/global.module.scss';
+
+.footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--color-black-1);
+  color: var(--font-color-white);
+}

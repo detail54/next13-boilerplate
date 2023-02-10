@@ -1,0 +1,10 @@
+.theme {
+  /* font colors */
+  --font-color-theme: #000000;
+  --font-color-grey: #808080;
+  --font-color-white: #fff;
+  --font-color-black: #000000;
+
+  /* background color */
+  --background-color: #fff;
+}
