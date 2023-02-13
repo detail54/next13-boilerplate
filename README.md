@@ -42,19 +42,22 @@
     │   │   └── templates
     │   │       └── ....
     │   ├── hooks
-    │   │   ├── useTheme.ts
+    │   │   ├── useTheme.tsx
     │   │   └── ...
     │   ├── styles
     │   │   ├── global.module.css
     │   │   ├── type.d.ts
     │   │   ├── DarkTheme.module.css
     │   │   └── LightTheme.module.css
+    │   └── utils
+    │       ├── propertyDataGetter.ts
+    │       ├── setProperty.ts
+    │       └── type.d.ts
     └── layout
-        ├── Footer.styles.ts
+        ├── Footer.module.css
         ├── Footer.tsx
-        ├── Header.styles.ts
-        ├── Header.tsx
-        └── Main.tsx
+        ├── Header.module.css
+        └── Header.tsx
 ```
 
 ## Head 관리
