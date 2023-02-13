@@ -15,7 +15,8 @@ const Header: React.FC<IProps> = ({ changeThemeButtonText, onChangeTheme }) => {
       header
       <Button
         type='RoundButton'
-        styles={{ bgColor: 'orange-4', size: 'xl' }}
+        size='xl'
+        styles={{ bgColor: 'orange-4' }}
         text={changeThemeButtonText}
         onClick={onChangeTheme}
       />

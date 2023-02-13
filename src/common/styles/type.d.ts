@@ -1,4 +1,5 @@
-type TSize<T = string> = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | T
+type TSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+type TZeroSize = TSize | 'zero'
 type TFontSize = 'xxs' | 'xs' | 'small' | 'base' | 'large' | 'xl' | 'xxl' | 'xxxl' | 'titleSize'
 type TFontWeight = 100 | 200 | 300 | 400 | 500 | 600
 type TFontColor = 'theme' | 'grey' | 'white' | 'black'
@@ -21,34 +22,16 @@ type TColor =
   | 'grey-4'
   | 'white'
 
-interface ITheme {
-  calcRem: (size: number) => string
-  fontSizes: Record<TFontSize, string>
-  fontWeight: Record<TSize, TFontWeight>
-  buttonWidth: Record<TSize, string>
-  buttonHeight: Record<TSize, string>
-  breakPoint: Record<TSize, string>
-  paddings: Record<TSize<'zero'>, string>
-  margins: Record<TSize<'zero'>, string>
-  colors: Record<TColor, string>
-  fontColors: Record<TFontColor, string>
-  backgroundColor: string
-}
-
 interface IStyleProps {
-  size?: TSize
+  width?: TSize
+  height?: TSize
   fontColor?: TFontColor
   fontSize?: TFontSize
-  fontWeight?: TFontWeight
   bgColor?: TColor
-  mediaSize?: TSize
-  marginX?: TSize<'zero'>
-  marginY?: TSize<'zero'>
-  paddingX?: TSize<'zero'>
-  paddingY?: TSize<'zero'>
+  marginX?: TZeroSize
+  marginY?: TZeroSize
+  paddingX?: TZeroSize
+  paddingY?: TZeroSize
 }
 
-type TButtonStyleProps = Pick<IStyleProps, 'marginX', 'marginY', 'bgColor', 'fontColor', 'size'>
-interface IBoareStyleProps extends IStyleProps {
-  height: number
-}
+type TButtonStyleProps = Pick<IStyleProps, 'marginX' | 'marginY' | 'fontColor' | 'bgColor'>
